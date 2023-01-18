@@ -1,15 +1,6 @@
-from sense_hat import SenseHat
-import time
+from weather_bot import WeatherBot
 
-sense = SenseHat()
-
-name = input("enter name:")
-
-age = input("enter your age:")
-
-msg = "Your name is " + name
-sense.show_message(msg)
-
-time.sleep(1)
-msg = "You are " + age + " years old"
-sense.show_message(msg)
+if __name__ == "__main__":
+    
+    wb = WeatherBot()
+    wb.getuserinfo()
