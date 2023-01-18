@@ -30,11 +30,13 @@ class WeatherBot:
             self.unit  = "imperial"
         elif self.tempUnit == "C":
             self.unit = "metric"
-        
+    
+    #TODO: if we use show_message, set scroll_speed to 0.07 
+    
     def test(self):
         msg = "Hello " + self.name
-        self.sense.show_message(msg)
+        self.sense.show_message(msg, scroll_speed=0.07)
         msg = "My city is " + self.city
-        self.sense.show_message(msg)
+        self.sense.show_message(msg, scroll_speed=0.07)
         
             
