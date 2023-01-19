@@ -39,6 +39,7 @@ class WeatherBot:
         
         """
         # Greeting
+        time.sleep(0.5)
         msg = "Hi, " + self.name
         self.sense.show_message(msg, scroll_speed=0.07)
         
