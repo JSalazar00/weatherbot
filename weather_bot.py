@@ -59,7 +59,7 @@ class WeatherBot:
         elif self.tempUnit == "C":
             msg = "Temp is " + temp + "C"
         self.sense.show_message(msg, scroll_speed=0.06)
-        
+        time.sleep(0.5)
         self.sense.show_message(dsc, scroll_speed=0.06)
         
         
@@ -99,6 +99,12 @@ class WeatherBot:
                 self.sense.set_pixels(blizzard2)
                 time.sleep(0.5)
                 self.sense.set_pixels(blizzard3)
+                time.sleep(0.5)
+        elif weather == "Mist":
+            for x in range(0,2):
+                self.sense.set_pixels(mist1)
+                time.sleep(0.5)
+                self.sense.set_pixels(mist2)
                 time.sleep(0.5)
         
                 

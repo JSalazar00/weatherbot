@@ -140,24 +140,24 @@ cloud3 = [
   bk, bk, w, w, w, w, w, bk
 ]
 
-face = [
-  b, b, b, b, b, b, b, b,
-  b, w, w, b, b, w, w, b,
-  b, w, w, b, b, w, w, b,
-  b, b, b, b, b, b, b, b,
-  w, w, b, b, b, b, w, w,
-  w, w, b, b, b, b, w, w,
-  b, b, w, w, w, w, b, b,
-  b, b, w, w, w, w, b, b
+mist1 = [
+  bk, bk, bk, bk, bk, bk, bk, bk,
+  bk, bk, bk, gr, gr, bk, bk, bk,
+  bk, bk, gr, gr, gr, gr, bk, bk,
+  bk, gr, gr, gr, gr, gr, gr, bk,
+  bk, bk, bk, bk, bk, bk, bk, bk,
+  bk, w, bk, w, bk, w, bk, w,
+  w, bk, w, bk, w, bk, w, bk,
+  bk, bk, bk, bk, bk, bk, bk, bk
 ]
 
-face2 = [
-  b, b, b, b, b, b, b, b,
-  b, w, w, b, b, w, w, b,
-  b, w, w, b, b, w, w, b,
-  b, b, b, b, b, b, b, b,
-  w, w, w, w, w, w, w, w,
-  w, w, w, w, w, w, w, w,
-  b, w, w, w, w, w, w, b,
-  b, b, w, w, w, w, b, b
+mist2 = [
+  bk, bk, bk, bk, bk, bk, bk, bk,
+  bk, bk, bk, gr, gr, bk, bk, bk,
+  bk, bk, gr, gr, gr, gr, bk, bk,
+  bk, gr, gr, gr, gr, gr, gr, bk,
+  bk, bk, bk, bk, bk, bk, bk, bk,
+  w, bk, w, bk, w, bk, w ,bk,
+  bk, w, bk, w, bk, w, bk, w,
+  bk, bk, bk, bk, bk, bk, bk, bk
 ]
