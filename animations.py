@@ -7,7 +7,7 @@ lb = (173, 216, 230)
 bk = (0, 0, 0)
 gr = (134, 136, 138)
 
-# Lines 78-198 are RGB values for LED Matrix
+# Lines 11-163 are different frames for the animations
 rain = [
   bk, bk, bk, bk, bk, y, y, y,
   bk, bk, w, w, w, w, y, y,

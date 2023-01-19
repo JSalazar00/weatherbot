@@ -11,7 +11,7 @@ class WeatherBot:
         
         # Adding this to dim PI - it's too bright
         self.sense.low_light = True
-        
+        # self.key is the API Key needed to use the OpenWeatherMap API
         self.key = API_KEY
         
     def getuserinfo(self):
@@ -32,11 +32,69 @@ class WeatherBot:
             self.unit = "metric"
     
     #TODO: if we use show_message, set scroll_speed to 0.07 
-    
-    def test(self):
-        msg = "Hello " + self.name
-        self.sense.show_message(msg, scroll_speed=0.07)
-        msg = "My city is " + self.city
-        self.sense.show_message(msg, scroll_speed=0.07)
+    def showcurrentWeather(self):
+        """
+        In this function, we will make a request to the OpenWeatherMap API
+        to show the current weather. We will use the user's responses from the getuserinfo function.
+        
+        """
+        url = "https://api.openweathermap.org/data/2.5/weather?q=" + self.city + "," + self.state + "," + self.country + "&appid=" + self.key + "&units="+ self.unit
+        response = requests.get(url).json()
+        
+        temp = response["main"]["temp"]
+        weather = response["weather"][0]["main"]
+        
+        # To do is to call animation function
+        self.animation(weather)
+        
+    def animation(self, weather):
+        """
+        We are going show the proper animation based on the weather parameter.
+
+        """
+        if weather == "Clear":
+            for x in range(0, 4):
+                self.sense.set_pixels(clear_skies)
+                time.sleep(0.5)
+                self.sense.set_pixels(clear_skies2)
+                time.sleep(0.5)
+                self.sense.set_pixels(clear_skies3)
+                time.sleep(0.5)
+                self.sense.set_pixels(clear_skies4)
+                time.sleep(0.5)
+        elif weather == "Clouds":
+            for x in range(0, 4):
+                self.sense.set_pixels(cloud)
+                time.sleep(0.5)
+                self.sense.set_pixels(cloud2)
+                time.sleep(0.5)
+                self.sense.set_pixels(cloud3)
+                time.sleep(0.5)
+        elif weather = "Rain":
+            for x in range(0, 4):
+                self.sense.set_pixels(rain)
+                time.sleep(0.5)
+                self.sense.set_pixels(rain2)
+                time.sleep(0.5)
+        elif weather == "Blizzard":
+            for x in range(0,4):
+                self.sense.set_pixels(blizzard)
+                time.sleep(0.5)
+                self.sense.set_pixels(blizzard2)
+                time.sleep(0.5)
+                self.sense.set_pixels(blizzard3)
+                time.sleep(0.5)
+        
+                
+                
+                
+            
+            
+                
+         
+        
+        
+        
+        
         
             

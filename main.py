@@ -5,4 +5,5 @@ if __name__ == "__main__":
     wb = WeatherBot()
     wb.getuserinfo()
     
-    wb.test()
+    wb.showcurrentWeather()
+    
